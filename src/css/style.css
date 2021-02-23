@@ -1,0 +1,168 @@
+:root {
+  /* Color */
+  --white-color: #f5f6fa;
+  --hover-dark-gray-color: #747d8c;
+}
+/* Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Font */
+
+body {
+  font-family: "Courgette", cursive;
+}
+
+/* Header */
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px;
+  color: var(--white-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+/* Header Title */
+
+.header .header_title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Header Navigation */
+
+.header .nav {
+  display: flex;
+}
+
+.header .nav li {
+  margin: 25px;
+  font-weight: bold;
+}
+
+.header .nav li:first-child {
+  margin-left: 0;
+}
+
+.header .nav li:last-child {
+  margin-right: 0;
+}
+
+/* Image Banner Section */
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  position: relative;
+  justify-content: center;
+  min-height: 100vh;
+  color: var(--white-color);
+  text-align: center;
+}
+
+/* Banner Image */
+
+.banner .banner_image {
+  background-image: url("../images/banner_image.jpg");
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.banner .banner_image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.6;
+}
+
+/* Banner Title */
+
+.banner .banner_title {
+  font-size: 55px;
+  margin-bottom: 30px;
+}
+
+/* Banner Sub Title */
+
+.banner .banner_sub_title {
+  font-size: 35px;
+  margin-bottom: 40px;
+}
+
+/* Banner Button */
+
+.banner .banner_button {
+  font-size: 20px;
+}
+
+.banner .banner_button {
+  background-color: var(--hover-dark-gray-color);
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+/* Media Query */
+
+/* 769px ~ 1024px */
+@media screen and (max-width: 1024px) {
+  /* Header */
+  .header {
+    padding: 30px;
+  }
+}
+
+/* ~ 768px */
+@media screen and (max-width: 768px) {
+  /* Header */
+  .header {
+    flex-direction: column;
+  }
+
+  .header .header_title {
+    margin-bottom: 20px;
+  }
+  /* Banner Section */
+  .banner {
+    min-height: 600px;
+  }
+
+  .banner .banner_title {
+    font-size: 45px;
+    margin-top: 50px;
+  }
+
+  .banner .banner_sub_title {
+    font-size: 25px;
+  }
+}
