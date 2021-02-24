@@ -1,7 +1,11 @@
 :root {
   /* Color */
   --white-color: #f5f6fa;
-  --hover-dark-gray-color: #747d8c;
+  --dark-gray-color: #747d8c;
+
+  /* Size */
+  --button-padding: 10px 20px;
+  --border-radius: 15px;
 }
 /* Reset */
 
@@ -23,6 +27,10 @@ a {
 /* Font */
 
 body {
+  font-family: "Rubik", sans-serif;
+}
+
+.banner {
   font-family: "Courgette", cursive;
 }
 
@@ -127,9 +135,66 @@ body {
 }
 
 .banner .banner_button {
-  background-color: var(--hover-dark-gray-color);
-  border-radius: 10px;
-  padding: 10px 20px;
+  background-color: var(--dark-gray-color);
+  border-radius: var(--border-radius);
+  padding: var(--button-padding);
+}
+
+/* About Section */
+
+/* About Title */
+.about .about_title {
+  margin: 50px 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+/* About Content */
+.about .about_content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about .about_content li {
+  padding: 30px;
+  height: 330px;
+  background-clip: content-box;
+  background-size: cover;
+  background-position: center;
+}
+
+/* About Content Image */
+
+.about_content .about_content_image {
+  background-image: url(../images/about_content_image.jpg);
+  flex-basis: 43%;
+}
+
+/* About Content Text */
+
+.about_content .about_content_text {
+  flex-basis: 57%;
+}
+
+.about_content_text h2,
+.about_content_text p {
+  margin-bottom: 35px;
+}
+
+.about_content_text p {
+  max-width: 800px;
+}
+
+/* About Button */
+
+.about_content .about_content_text .about_button {
+  background-color: var(--dark-gray-color);
+  color: var(--white-color);
+  padding: var(--button-padding);
+  border-radius: var(--border-radius);
 }
 
 /* Media Query */
@@ -142,7 +207,7 @@ body {
   }
 }
 
-/* ~ 768px */
+/* 481px ~ 768px */
 @media screen and (max-width: 768px) {
   /* Header */
   .header {
@@ -164,5 +229,18 @@ body {
 
   .banner .banner_sub_title {
     font-size: 25px;
+  }
+
+  /* About Section */
+  .about_content .about_content_image,
+  .about_content .about_content_text {
+    flex-basis: 100%;
+  }
+}
+
+/* ~ 480px */
+@media screen and (max-width: 480px) {
+  .header .nav li {
+    margin: 10px;
   }
 }
