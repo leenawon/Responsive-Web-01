@@ -349,6 +349,10 @@ body {
   }
 
   /* About Section */
+  .about_content {
+    height: 580px;
+  }
+
   .about_content .about_content_image,
   .about_content .about_content_text {
     flex-basis: 100%;
